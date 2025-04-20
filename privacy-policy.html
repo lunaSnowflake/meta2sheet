@@ -37,9 +37,28 @@
     a:hover {
       text-decoration: underline;
     }
+    .home-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 0.95em;
+      color: #1a73e8;
+      text-decoration: none;
+      background: #e6f0ff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .home-link:hover {
+      text-decoration: underline;
+      background: #d8eaff;
+    }
+
   </style>
 </head>
 <body>
+  <a href="https://lunaticsainwork.github.io/meta2sheet/" class="home-link">Home</a>
+
   <h1>Privacy Policy for Meta2Sheet</h1>
   <p><strong>Effective Date:</strong> 2025-04-12</p>
 
@@ -58,6 +77,20 @@
     <li><strong>host permissions:</strong> Required to access and interact with Metabase dashboards that may be hosted on various custom domains. Only interacts with Metabase URLs the user actively navigates to.</li>
   </ul>
 
+  <h2>Google API Scopes Used</h2>
+  <p><strong>Meta2Sheet uses the following Google OAuth scopes to function:</strong></p>
+  <ul>
+    <li>
+      <strong>https://www.googleapis.com/auth/spreadsheets</strong> – Required to create new sheets, update existing ones, and append data to spreadsheets that the user explicitly selects. This is essential for transferring Metabase dashboard data into Google Sheets.
+    </li>
+    <li>
+      <strong>https://www.googleapis.com/auth/drive.readonly</strong> – Used to fetch and display a list of spreadsheets from the user's Google Drive, allowing them to choose a destination file. <strong>This permission is read-only</strong>; Meta2Sheet does not create, modify, or delete any files using this scope.
+    </li>
+  </ul>
+  <p>
+    These permissions are requested only with the user's consent and are used solely to support the extension’s functionality. No spreadsheet or Drive data is stored, transmitted, or shared externally.
+  </p>
+
   <h2>Data Usage</h2>
   <p>All data processing (such as reading dashboard filters and sending them to Google Sheets) happens locally in your browser or through secure calls to Google APIs. No data is transmitted to any external servers operated by us.</p>
 
@@ -73,5 +106,6 @@
   <h2>Contact</h2>
   <p>If you have any questions or concerns about this Privacy Policy, you can reach us at:</p>
   <p>📧 <a href="mailto:lunaticsainwork+meta2sheet@gmail.com">lunaticsainwork+meta2sheet@gmail.com</a></p>
+
 </body>
 </html>
